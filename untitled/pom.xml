@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>java.by.shop.task4</groupId>
-    <artifactId>untitled</artifactId>
+    <artifactId>task4-servlets</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
