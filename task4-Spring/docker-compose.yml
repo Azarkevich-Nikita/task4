@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  f1_db:
+    image: postgres:15-alpine
+    container_name: f1_store_database
+    restart: always
+    environment:
+      POSTGRES_USER: f1_user
+      POSTGRES_PASSWORD: f1_password
+      POSTGRES_DB: f1_store
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - f1_db_data:/var/lib/postgresql/data
+
+volumes:
+  f1_db_data:

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Страница приветствия</title>
+</head>
+<body>
+<!-- Вывод переменной из модели -->
+<h1 th:text="${message}">Текст по умолчанию</h1>
+
+<!-- Условный оператор -->
+<p th:if="${message != null}">Сообщение успешно получено!</p>
+
+<!-- Итерация по списку -->
+<ul>
+    <li th:each="item : ${items}" th:text="${item}">Элемент списка</li>
+</ul>
+</body>
+</html>
